@@ -1,0 +1,9 @@
+<ion-content [fullscreen]="true">
+  <ion-select placeholder="Escoja una figura geométrica" (ionChange)="manejarSelecciontipoFiguraGeometrica($event)" 
+  label="Figura Geométrica">
+    <ion-select-option value="circulo">círculo</ion-select-option>
+    <ion-select-option value="triangulo">triángulo</ion-select-option>
+  </ion-select>
+  <app-circulo *ngIf="esCirculo()"/>
+  <app-triangulo *ngIf="esTriangulo()"/>
+</ion-content>
